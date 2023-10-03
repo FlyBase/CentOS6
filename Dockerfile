@@ -36,6 +36,7 @@ RUN cd /tmp && \
     rm sqlite-amalgamation-3360000.zip
 
 # Download, compile, and install SVN 1.6.0
+# There's a random error on line 45 of the Makefile where we need to remove that line before compiling.
 RUN cd /tmp && \
     curl -fsSL -O https://archive.apache.org/dist/subversion/subversion-1.6.0.tar.gz && \
     tar xzf subversion-1.6.0.tar.gz && \
